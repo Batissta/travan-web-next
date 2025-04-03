@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
-const page = async () => {
+const LoginPage = async () => {
   return (
     <div className="px-14 py-12 bg-zinc-50 flex items-center">
       <div className="w-[80%] mx-auto flex flex-col">
@@ -42,4 +42,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default LoginPage;
