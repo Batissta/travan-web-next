@@ -1,7 +1,11 @@
 import React from "react";
 
 const page = async () => {
-  return <main>Login</main>;
+  return (
+    <>
+      <h1>Bem vindo ao seu perfil!</h1>
+    </>
+  );
 };
 
 export default page;
