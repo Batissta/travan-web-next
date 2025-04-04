@@ -4,9 +4,9 @@ import React from "react";
 
 const SignUpPage = async () => {
   return (
-    <div className="px-14 py-12 bg-zinc-50 flex items-center">
-      <div className="w-[80%] mx-auto flex flex-col">
-        <h1 className="text-4xl text-zinc-900 font-[800] mb2">Cadastre-se</h1>
+    <div className="px-14 py-6 md:py-8 lg:py-12 bg-zinc-50 flex items-center justify-center">
+      <div className="w-[100%] md:w-[90%] lg:w-[80%] flex flex-col">
+        <h1 className="text-4xl text-zinc-900 font-[800] mb-2">Cadastre-se</h1>
         <span className="text-zinc-700 mb-6">
           Faça o seu cadastro e encontre caronas para o seu destino!
         </span>
