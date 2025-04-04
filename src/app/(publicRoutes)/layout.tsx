@@ -16,18 +16,13 @@ export default function RootLayout({
     <main className="bg-[url(/background.jpg)] bg-center grid grid-cols-2 h-screen overflow-hidden">
       <div className="flex flex-col justify-center items-center">
         <Image
-          src={"/logo.png"}
+          priority
+          src={"/slogon.png"}
           alt="logo travan"
-          width={312}
-          height={312}
+          width={512}
+          height={512}
           className="m-0"
-        />
-        <Image
-          src={"/name.png"}
-          alt="name travan"
-          width={312}
-          height={156}
-          className="ml-10"
+          sizes="20vw"
         />
       </div>
       {children}

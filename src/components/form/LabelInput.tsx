@@ -1,4 +1,4 @@
-import { Key, Mail } from "lucide-react";
+import { IdCard, Key, Mail } from "lucide-react";
 import React from "react";
 
 type PropsLabelInput = {
@@ -6,7 +6,7 @@ type PropsLabelInput = {
   htmlFor: string;
   type: string;
   placeholder?: string;
-  icon: "email" | "password";
+  icon: "email" | "password" | "personality";
 };
 
 const LabelInput = ({
@@ -25,6 +25,7 @@ const LabelInput = ({
       >
         {icon === "email" && <Mail width={16} height={16} />}
         {icon === "password" && <Key width={16} height={16} />}
+        {icon === "personality" && <IdCard width={16} height={16} />}
         <input
           className="placeholder:text-zinc-400 grow focus:outline-none"
           type={type}
