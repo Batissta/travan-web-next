@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="bg-[url(/background.jpg)] bg-center grid grid-cols-2 h-screen overflow-hidden">
-      <div className="flex flex-col justify-center items-center">
+    <main className="bg-[url(/background.jpg)] bg-center grid grid-col-1 md:grid-cols-2 min-h-screen">
+      <div className="flex-col justify-center items-center hidden md:flex">
         <Image
           priority
           src={"/slogon.png"}
@@ -22,7 +22,7 @@ export default function RootLayout({
           width={724}
           height={724}
           className="m-0"
-          sizes="50vw"
+          sizes="50vw, (max-width: 768px) 0vw"
         />
       </div>
       {children}
