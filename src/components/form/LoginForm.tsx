@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import LabelInput from "./LabelInput";
+import { motion } from "motion/react";
 import { Button } from "../ui/button";
 
 const LoginForm = () => {
@@ -24,7 +25,16 @@ const LoginForm = () => {
         icon={"password"}
         placeholder="******"
       />
-      <Button className="py-6 cursor-pointer">Entrar</Button>
+      <motion.div
+        whileHover={{ scale: 1.01 }}
+        whileTap={{
+          scale: 0.99,
+          rotate: "1deg",
+        }}
+        className="flex outline-none"
+      >
+        <Button className="py-4 cursor-pointer h-full w-full">Entrar</Button>
+      </motion.div>
     </form>
   );
 };
