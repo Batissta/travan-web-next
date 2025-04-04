@@ -19,10 +19,10 @@ export default function RootLayout({
           priority
           src={"/slogon.png"}
           alt="logo travan"
-          width={512}
-          height={512}
+          width={724}
+          height={724}
           className="m-0"
-          sizes="20vw"
+          sizes="50vw"
         />
       </div>
       {children}
