@@ -33,7 +33,7 @@ const LoginForm = () => {
         }}
         className="flex outline-none"
       >
-        <Button className="py-4 cursor-pointer h-full w-full">Entrar</Button>
+        <Button className="py-3 cursor-pointer h-full w-full">Entrar</Button>
       </motion.div>
     </form>
   );
