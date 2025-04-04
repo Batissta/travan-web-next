@@ -16,30 +16,30 @@ const HeaderNav = () => {
   if (!mobile)
     return (
       <nav>
-        <ul className="flex gap-4 items-center text-zinc-200 uppercase">
+        <ul className="flex gap-4 items-center text-(--color-one) uppercase">
           <Link
             href={ePaths.viagens}
-            className={`rounded-2xl group px-4 py-2 hover:bg-zinc-800 hover:rounded-2xl duration-150`}
+            className={`rounded-2xl group px-4 py-2 hover:bg-zinc-800/50  hover:rounded-2xl duration-150`}
           >
-            <li className="flex gap-2 group-hover:text-zinc-400 duration-150 text-[.875rem] items-center">
+            <li className="flex gap-2 group-hover:text-(--color-two) duration-150 text-[.875rem] items-center">
               <BadgePlus />
               Viagens
             </li>
           </Link>
           <Link
             href={ePaths.perfil}
-            className={`rounded-2xl group px-4 py-2 hover:bg-zinc-800 hover:rounded-2xl duration-150`}
+            className={`rounded-2xl group px-4 py-2 hover:bg-zinc-800/50 hover:rounded-2xl duration-150`}
           >
-            <li className="flex gap-2 group-hover:text-zinc-400 duration-150 text-[.875rem] items-center">
+            <li className="flex gap-2 group-hover:text-(--color-two) duration-150 text-[.875rem] items-center">
               <Files />
               Suas caronas
             </li>
           </Link>
           <Link
             href={ePaths.caronas}
-            className={`rounded-2xl group px-4 py-2 hover:bg-zinc-800 hover:rounded-2xl duration-150`}
+            className={`rounded-2xl group px-4 py-2 hover:bg-zinc-800/50 hover:rounded-2xl duration-150`}
           >
-            <li className="flex gap-2 group-hover:text-zinc-400 duration-150 text-[.875rem] items-center">
+            <li className="flex gap-2 group-hover:text-(--color-two) duration-150 text-[.875rem] items-center">
               <Fingerprint />
               Perfil
             </li>
