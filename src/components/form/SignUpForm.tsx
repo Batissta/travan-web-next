@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import { motion } from "motion/react";
 import LabelInput from "./LabelInput";
 import RadioType from "./RadioType";
 
@@ -13,7 +14,7 @@ const SignUpForm = () => {
 
   return (
     <form
-      className="flex flex-col gap-4 mb-8"
+      className="flex flex-col gap-4 mb-6"
       autoComplete="off"
       onSubmit={(e) => e.preventDefault()}
     >
@@ -49,7 +50,16 @@ const SignUpForm = () => {
         <label className="block mb-2">Tipo</label>
         <RadioType type={type} setType={setType} />
       </div>
-      <Button className="py-6 cursor-pointer">Cadastrar</Button>
+      <motion.div
+        whileHover={{ scale: 1.01 }}
+        whileTap={{
+          scale: 0.99,
+          rotate: "1deg",
+        }}
+        className="flex outline-none"
+      >
+        <Button className="py-3 cursor-pointer h-full w-full">Cadastrar</Button>
+      </motion.div>
     </form>
   );
 };
