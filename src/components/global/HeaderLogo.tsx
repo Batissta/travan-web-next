@@ -14,7 +14,7 @@ const HeaderLogo = () => {
           width={120}
           height={70}
           alt="Travan Logo"
-          className="h-[50px] lg:h-[70px] w-auto"
+          className="h-[50px] w-auto"
           sizes="15vw"
         />
       ) : (
@@ -24,7 +24,7 @@ const HeaderLogo = () => {
           width={220}
           height={70}
           alt="Travan assinatura"
-          className="h-[50px] lg:h-[70px] w-auto"
+          className="h-[50px] w-auto"
           sizes="15vw"
         />
       )}
