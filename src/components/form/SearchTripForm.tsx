@@ -6,6 +6,7 @@ import LabelInput from "./LabelInput";
 import { motion } from "motion/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { tripSchema, TTripSchema } from "@/types/SearchTypes";
+import Error from "../helpers/Error";
 
 const SearchTripForm = () => {
   const {
@@ -16,7 +17,7 @@ const SearchTripForm = () => {
   } = useForm<TTripSchema>({ resolver: zodResolver(tripSchema) });
   return (
     <form
-      className="flex flex-col gap-4 my-6"
+      className="flex flex-col gap-2 my-6"
       autoComplete="off"
       onSubmit={handleSubmit((data) => {
         console.log("Form is being submitted.");
@@ -34,9 +35,7 @@ const SearchTripForm = () => {
           placeholder="Salvador - BA"
           className="placeholder:text-zinc-400 text-zinc-200"
         />
-        <p className="text-red-400/70">{`${
-          errors.origin ? errors.origin.message : ""
-        }`}</p>
+        <Error error={errors.origin && errors.origin.message} />
       </div>
 
       <div>
@@ -48,9 +47,7 @@ const SearchTripForm = () => {
           placeholder="Campina Grande - PB"
           className="placeholder:text-zinc-400 text-zinc-200"
         />
-        <p className="text-red-400/70">{`${
-          errors.destiny ? errors.destiny.message : ""
-        }`}</p>
+        <Error error={errors.destiny && errors.destiny.message} />
       </div>
 
       <motion.div

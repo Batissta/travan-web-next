@@ -22,8 +22,8 @@ const ButtonChooseVehicle = ({ value, setValue, logo }: ChooseVehicleProps) => {
         rotate: "11.25deg",
       }}
       onClick={() => setValue(logo)}
-      className={`p-4 border border-blue-200 rounded-2xl cursor-pointer text-blue-200 ${
-        value === logo && "bg-blue-200 text-blue-950"
+      className={`p-4 border border-(--color-two) rounded-2xl cursor-pointer text-(--color-two) ${
+        value === logo && "bg-(--color-two) text-blue-950 border-blue-950"
       }`}
     >
       {logo === "bus" && <Bus width={38} height={38} />}
