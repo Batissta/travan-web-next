@@ -4,20 +4,8 @@ import { useForm } from "react-hook-form";
 import { Button } from "../ui/button";
 import LabelInput from "./LabelInput";
 import { motion } from "motion/react";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-const tripSchema = z
-  .object({
-    origin: z.string().nonempty("Sua origem não pode estar vazia"),
-    destiny: z.string().nonempty("Seu destino não pode estar vazio"),
-  })
-  .refine((data) => data.origin !== data.destiny, {
-    message: "The destiny must be different from the origin",
-    path: ["destiny"],
-  });
-
-type TTripSchema = z.infer<typeof tripSchema>;
+import { tripSchema, TTripSchema } from "@/types/SearchTypes";
 
 const SearchTripForm = () => {
   const {
