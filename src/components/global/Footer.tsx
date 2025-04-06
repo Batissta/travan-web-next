@@ -17,7 +17,7 @@ const Footer = () => {
           alt="logo travan"
           width={124}
           height={124}
-          className="m-0 scale-x-[-1]"
+          className="m-0 scale-x-[-1] h-auto w-auto"
           sizes="10vw, (max-width: 768px) 124px"
         />
       </div>
