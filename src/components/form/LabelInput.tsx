@@ -24,7 +24,7 @@ const LabelInput = ({
       {label && <label htmlFor={htmlFor}>{label}</label>}
       <label
         htmlFor={htmlFor}
-        className="border border-zinc-600 p-2 rounded relative flex gap-2 items-center text-zinc-700"
+        className="border border-zinc-600 p-3 rounded relative flex gap-2 items-center text-zinc-700"
       >
         {icon === "email" && <Mail width={16} height={16} />}
         {icon === "password" && <Key width={16} height={16} />}
