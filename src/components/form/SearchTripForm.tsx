@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "../ui/button";
 import LabelInput from "./LabelInput";
@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { tripSchema, TTripSchema } from "@/types/SearchTypes";
 import Error from "../helpers/Error";
 import { Search } from "lucide-react";
+import ChooseVehicle from "../home/ChooseVehicle";
 
 const SearchTripForm = () => {
   const {
@@ -16,9 +17,10 @@ const SearchTripForm = () => {
     formState: { errors, isSubmitting },
     reset,
   } = useForm<TTripSchema>({ resolver: zodResolver(tripSchema) });
+  const [vehicle, setVehicle] = useState<string>("bus");
   return (
     <form
-      className="flex flex-col gap-2 my-6"
+      className="flex flex-col gap-3 my-6"
       autoComplete="off"
       onSubmit={handleSubmit((data) => {
         console.log("Form is being submitted.");
@@ -27,7 +29,8 @@ const SearchTripForm = () => {
         reset();
       })}
     >
-      <div className="mb-1">
+      <ChooseVehicle vehicle={vehicle} setVehicle={setVehicle} />
+      <div className="mt-2">
         <LabelInput
           {...register("origin", { required: "A origem é obrigatória" })}
           htmlFor="origin"
@@ -39,7 +42,7 @@ const SearchTripForm = () => {
         <Error error={errors.origin && errors.origin.message} />
       </div>
 
-      <div className="mb-1">
+      <div>
         <LabelInput
           {...register("destiny", { required: "O destino é obrigatório" })}
           htmlFor="destiny"

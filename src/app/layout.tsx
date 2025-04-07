@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Poppins,
+  Montserrat_Alternates,
+} from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/global/Footer";
 
@@ -19,6 +24,12 @@ const poppins = Poppins({
   weight: ["400", "600", "800"],
 });
 
+const montserratAlternates = Montserrat_Alternates({
+  variable: "--font-montserrat-alterates",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "600", "800"],
+});
+
 export const metadata: Metadata = {
   title: "Travan - Sua carona chegou",
   description:
@@ -33,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased bg-zinc-950`}
+        className={`${geistSans.variable} ${montserratAlternates.variable} ${geistMono.variable} ${poppins.variable} antialiased bg-zinc-950`}
       >
         {children}
         <Footer />

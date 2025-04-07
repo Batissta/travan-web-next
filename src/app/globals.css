@@ -82,6 +82,14 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+.alternates {
+  font-family: var(--font-montserrat-alterates);
+}
+
 .dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
