@@ -1,14 +1,18 @@
 "use client";
-import React, { useState } from "react";
 import ButtonChooseVehicle from "./ButtonChooseVehicle";
 
-const ChooseVehicle = () => {
-  const [value, setValue] = useState<string>("bus");
+const ChooseVehicle = ({
+  vehicle,
+  setVehicle,
+}: {
+  vehicle: string;
+  setVehicle: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
-    <div className="flex gap-4 justify-between px-1">
-      <ButtonChooseVehicle value={value} setValue={setValue} logo="bus" />
-      <ButtonChooseVehicle value={value} setValue={setValue} logo="van" />
-      <ButtonChooseVehicle value={value} setValue={setValue} logo="car" />
+    <div className="grid grid-cols-3 gap-4">
+      <ButtonChooseVehicle value={vehicle} setValue={setVehicle} logo="bus" />
+      <ButtonChooseVehicle value={vehicle} setValue={setVehicle} logo="van" />
+      <ButtonChooseVehicle value={vehicle} setValue={setVehicle} logo="car" />
     </div>
   );
 };
