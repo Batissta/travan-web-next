@@ -11,6 +11,7 @@ type ChooseVehicleProps = {
 const ButtonChooseVehicle = ({ value, setValue, logo }: ChooseVehicleProps) => {
   return (
     <motion.button
+      type="button"
       whileHover={{
         scale: 1.05,
         y: -5,
@@ -22,13 +23,28 @@ const ButtonChooseVehicle = ({ value, setValue, logo }: ChooseVehicleProps) => {
         rotate: "11.25deg",
       }}
       onClick={() => setValue(logo)}
-      className={`p-4 border border-(--color-two) rounded-2xl cursor-pointer text-(--color-two) ${
+      className={`alternates font-[600] px-4 py-2 border border-(--color-two) rounded-2xl cursor-pointer text-(--color-two) flex flex-col items-center justify-center ${
         value === logo && "bg-(--color-two) text-slate-950 border-slate-950"
       }`}
     >
-      {logo === "bus" && <Bus width={38} height={38} />}
-      {logo === "van" && <BusFront width={38} height={38} />}
-      {logo === "car" && <Car width={38} height={38} />}
+      {logo === "bus" && (
+        <>
+          <Bus width={24} height={24} />
+          <p className="hidden md:block">Ônibus</p>
+        </>
+      )}
+      {logo === "van" && (
+        <>
+          <BusFront width={24} height={24} />
+          <p className="hidden md:block">Van</p>
+        </>
+      )}
+      {logo === "car" && (
+        <>
+          <Car width={24} height={24} />
+          <p className="hidden md:block">Carro</p>
+        </>
+      )}
     </motion.button>
   );
 };
