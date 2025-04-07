@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import SearchTripForm from "@/components/form/SearchTripForm";
-import ChooseVehicle from "@/components/home/ChooseVehicle";
 import {
   Carousel,
   CarouselContent,
@@ -29,8 +28,7 @@ const HomePage = () => {
               experiências!
             </p>
           </div>
-          <div className="flex flex-col col-start-2 w-[80%]">
-            <ChooseVehicle />
+          <div className="w-[80%]">
             <SearchTripForm />
           </div>
         </div>
