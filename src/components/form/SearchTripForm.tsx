@@ -7,6 +7,7 @@ import { motion } from "motion/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { tripSchema, TTripSchema } from "@/types/SearchTypes";
 import Error from "../helpers/Error";
+import { Search } from "lucide-react";
 
 const SearchTripForm = () => {
   const {
@@ -26,25 +27,25 @@ const SearchTripForm = () => {
         reset();
       })}
     >
-      <div>
+      <div className="mb-1">
         <LabelInput
           {...register("origin", { required: "A origem é obrigatória" })}
           htmlFor="origin"
           type="text"
           icon={"pin"}
-          placeholder="Salvador - BA"
+          placeholder="Ponto um"
           className="placeholder:text-zinc-400 text-zinc-200"
         />
         <Error error={errors.origin && errors.origin.message} />
       </div>
 
-      <div>
+      <div className="mb-1">
         <LabelInput
           {...register("destiny", { required: "O destino é obrigatório" })}
           htmlFor="destiny"
           type="text"
           icon={"pin"}
-          placeholder="Campina Grande - PB"
+          placeholder="Ponto dois"
           className="placeholder:text-zinc-400 text-zinc-200"
         />
         <Error error={errors.destiny && errors.destiny.message} />
@@ -56,14 +57,14 @@ const SearchTripForm = () => {
           scale: 0.99,
           rotate: "1deg",
         }}
-        className="mt-6 flex outline-none"
+        className="mt-4 flex outline-none"
       >
         <Button
           disabled={isSubmitting}
           type="submit"
           className="py-3 cursor-pointer h-full w-full bg-(--color-two) hover:bg-(--color-one)"
         >
-          Confirmar
+          Procurar caronas <Search />
         </Button>
       </motion.div>
     </form>
