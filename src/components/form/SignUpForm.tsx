@@ -1,13 +1,14 @@
 "use client";
-import { useState } from "react";
 import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import LabelInput from "./LabelInput";
-import RadioType from "./RadioType";
-import { useForm } from "react-hook-form";
+import { useForm, UseFormRegister } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema, TRegisterSchema } from "@/types/RegisterTypes";
 import Error from "../helpers/Error";
+import { createUser } from "@/server-actions/api";
+import { eUsuarioTipo } from "@/types/LoginTypes";
+import { RoleSelector } from "./RadioTypeV0";
 
 const SignUpForm = () => {
   const {
@@ -18,16 +19,17 @@ const SignUpForm = () => {
   } = useForm<TRegisterSchema>({
     resolver: zodResolver(registerSchema),
   });
-  const [type, setType] = useState<string>("passageiro");
 
+  const handleFormSubmit = async (data: TRegisterSchema) => {
+    const response = await createUser({ ...data });
+    console.log(response);
+    reset();
+  };
   return (
     <form
       className="flex flex-col gap-1 mb-6"
       autoComplete="off"
-      onSubmit={handleSubmit((data) => {
-        console.log(data);
-        reset();
-      })}
+      onSubmit={handleSubmit(handleFormSubmit)}
     >
       <div>
         <LabelInput
@@ -77,8 +79,10 @@ const SignUpForm = () => {
       </div>
 
       <div className="mb-2">
-        <label className="block mb-2">Tipo</label>
-        <RadioType type={type} setType={setType} />
+        <RoleSelector
+          register={register}
+          defaultValue={eUsuarioTipo.passageiro}
+        />
       </div>
       <motion.div
         whileHover={{ scale: 1.01 }}
@@ -101,3 +105,11 @@ const SignUpForm = () => {
 };
 
 export default SignUpForm;
+
+export type TResolverSignUp = UseFormRegister<{
+  nome: string;
+  email: string;
+  senha: string;
+  confirmaSenha: string;
+  tipo: eUsuarioTipo;
+}>;
