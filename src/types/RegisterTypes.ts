@@ -1,5 +1,5 @@
 import { z } from "zod";
-// import { eUsuarioTipo } from "./LoginTypes";
+import { eUsuarioTipo } from "./LoginTypes";
 
 export const registerSchema = z
   .object({
@@ -22,7 +22,7 @@ export const registerSchema = z
       .string()
       .nonempty("This field can't be empty")
       .min(4, "Sua senha deve conter pelo menos 4 caracteres!"),
-    // tipo: z.nativeEnum(eUsuarioTipo),
+    tipo: z.nativeEnum(eUsuarioTipo),
   })
   .refine((data) => data.senha === data.confirmaSenha, {
     message: "As senhas devem ser iguais",
