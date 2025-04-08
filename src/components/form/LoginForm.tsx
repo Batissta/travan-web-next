@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import LabelInput from "./LabelInput";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
@@ -7,6 +7,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, TLoginSchema } from "@/types/LoginTypes";
 import Error from "../helpers/Error";
+import { login } from "@/server-actions/api";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const {
@@ -15,14 +17,22 @@ const LoginForm = () => {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<TLoginSchema>({ resolver: zodResolver(loginSchema) });
+  const router = useRouter();
+  const [error, setError] = useState<string>("");
+  const handleSubmitForm = async (data: TLoginSchema) => {
+    const response = await login(data);
+    if (response?.success) {
+      return router.push("/");
+    }
+    reset();
+    setError("Credênciais Inválidas!");
+  };
 
   return (
     <form
       className="flex flex-col gap-1 mb-8"
       autoComplete="off"
-      onSubmit={handleSubmit(() => {
-        reset();
-      })}
+      onSubmit={handleSubmit(handleSubmitForm)}
     >
       <div>
         <LabelInput
@@ -47,7 +57,7 @@ const LoginForm = () => {
         />
         <Error error={errors.senha && errors.senha.message} />
       </div>
-
+      <Error error={error && error} />
       <motion.div
         whileHover={{ scale: 1.01 }}
         whileTap={{
