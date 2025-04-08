@@ -17,7 +17,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const HomePage = () => {
   return (
     <>
-      <section className="bg-blue-900/10 min-h-auto px-14 font-(font-family:--font-poppins) grid grid-cols-2 overflow-x-hidden gap-12 items-center justify-center pt-[4rem] pb-[6rem]">
+      <section className="bg-blue-900/10 min-h-auto px-14 font-(font-family:--font-poppins) grid grid-cols-1 lg:grid-cols-2 overflow-x-hidden gap-12 items-center justify-center pt-[4rem] pb-[6rem]">
         <div className="flex flex-col mx-auto">
           <div className="flex flex-col items-start">
             <h1 className="text-5xl font-extrabold tracking-tighter mb-4 text-(--color-one) w-fit">
@@ -28,7 +28,7 @@ const HomePage = () => {
               experiências!
             </p>
           </div>
-          <div className="w-[80%]">
+          <div className="w-[80%] mx-auto lg:mx-0">
             <SearchTripForm />
           </div>
         </div>
