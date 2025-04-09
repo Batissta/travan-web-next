@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![7](https://github.com/user-attachments/assets/3b010930-160b-413c-bc99-c14601aed249)
+<div align="center">
 
-## Getting Started
+  # O seu app de caronas
+  
+  [![My Skills](https://skillicons.dev/icons?i=nextjs,react,typescript,git,github)](https://skillicons.dev)
+  
 
-First, run the development server:
+Aplicação web desenvolvida em Next.js para conectar pessoas interessadas em oferecer ou buscar caronas. Utiliza React Hook Form para o gerenciamento eficiente dos formulários e Zod para validação de dados, garantindo uma experiência confiável e segura para os usuários.
+
+</div>
+
+## 🧙🏽‍♂️ Instalação
+
+Siga os passos abaixo para clonar e executar o projeto localmente:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+git clone https://github.com/Batissta/travan-web-next.git
+
+# Acesse o diretório do projeto
+cd travan-web-next
+
+# Instale as dependências
+npm install
+# ou
+yarn
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Executando o projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Inicie o servidor de desenvolvimento
+npm run dev
+# ou
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Estrutura de pastas
 
-## Learn More
+```bash
+/components     → Componentes reutilizáveis da UI  
+/pages          → Rotas da aplicação (Next.js)  
+/forms          → Schemas e lógica de validação com Zod  
+/styles         → Estilos globais e utilitários  
+/utils          → Funções auxiliares  
+/public         → Arquivos estáticos (imagens, ícones etc.)  
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto está licenciado sob os termos da MIT License. Veja o arquivo LICENSE para mais detalhes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+___
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Made by [Francinaldo Batista](https://linkedin.com/in/francinaldobatista)_
