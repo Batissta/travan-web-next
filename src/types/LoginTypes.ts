@@ -8,14 +8,14 @@ export enum eUsuarioTipo {
 export const loginSchema = z.object({
   email: z
     .string()
-    .nonempty("Email is required")
+    .nonempty("O campo email é obrigatório!")
     .trim()
     .toLowerCase()
     .email("E-mail inválido!"),
   senha: z
     .string()
-    .nonempty("Password is required")
-    .min(4, "Sua senha deve conter pelo menos 4 caracteres!"),
+    .nonempty("O campo senha é obrigatório!")
+    .min(4, "Sua senha deve conter no mínimo 4 caracteres!"),
 });
 
 export type TLoginSchema = z.infer<typeof loginSchema>;
