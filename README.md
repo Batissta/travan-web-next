@@ -6,7 +6,8 @@
   [![My Skills](https://skillicons.dev/icons?i=nextjs,react,typescript,git,github)](https://skillicons.dev)
   
 
-Aplicação web desenvolvida em Next.js para conectar pessoas interessadas em oferecer ou buscar caronas. Utiliza React Hook Form para o gerenciamento eficiente dos formulários e Zod para validação de dados, garantindo uma experiência confiável e segura para os usuários.
+Aplicação web desenvolvida em Next.js para conectar pessoas interessadas em oferecer ou buscar caronas. Utiliza React Hook Form para o gerenciamento eficiente dos formulários e Zod para validação de dados, garantindo uma experiência confiável e segura para os usuários!<br>
+A aplicação está em desenvolvimento, mas em breve, sua primeira versão estará disponível!
 
 </div>
 
