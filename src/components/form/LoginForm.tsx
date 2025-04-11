@@ -57,7 +57,6 @@ const LoginForm = () => {
         />
         <Error error={errors.senha && errors.senha.message} />
       </div>
-      <Error error={error && error} />
       <motion.div
         whileHover={{ scale: 1.01 }}
         whileTap={{
@@ -74,6 +73,7 @@ const LoginForm = () => {
           Entrar
         </Button>
       </motion.div>
+      <Error error={error && error} />
     </form>
   );
 };
