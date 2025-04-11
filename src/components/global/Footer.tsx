@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900/10 py-6 px-8 font-(family-name:--font-poppins) flex flex-col">
+    <footer className="bg-slate-950 py-6 px-8 font-(family-name:--font-poppins) flex flex-col">
       <div className="flex justify-between items-center w-full">
         <div>
           <h1 className="text-4xl font-extrabold text-(--color-one)">Travan</h1>

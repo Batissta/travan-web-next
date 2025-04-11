@@ -18,7 +18,7 @@ const HeaderNavMobile = () => {
     <Sheet>
       <SheetTrigger
         asChild
-        className="text-zinc-300 bg-zinc-800 p-2 rounded cursor-pointer"
+        className="text-zinc-300 bg-slate-950 p-2 rounded cursor-pointer"
       >
         <Button variant={"default"}>
           <Ellipsis />
