@@ -21,7 +21,7 @@ const HomePage = () => {
         <div className="flex flex-col mx-auto">
           <div className="flex flex-col items-start">
             <h1 className="text-5xl font-extrabold tracking-tighter mb-4 text-(--color-one) w-fit">
-              Vá a qualquer lugar com o App do Travan
+              Vá a qualquer lugar com o App do Travan!
             </h1>
             <p className="text-[1rem] font-semibold mb-8 text-(--color-two) w-fit">
               Seu próximo destino te espera. Explore, descubra e viva novas
