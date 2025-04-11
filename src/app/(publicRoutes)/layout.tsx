@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="bg-[url(/background.jpg)] bg-center grid grid-col-1 md:grid-cols-2 min-h-screen">
+    <main className="bg-slate-950 grid grid-col-1 md:grid-cols-2 min-h-screen">
       <div className="flex-col justify-center items-center hidden md:flex">
         <Image
           priority
