@@ -3,7 +3,7 @@ import { loginSchema, TLoginSchema } from "@/types/LoginTypes";
 import { registerSchema, TRegisterSchema } from "@/types/RegisterTypes";
 import { setCookies } from "./Cookies";
 
-const API_KEY = `http://localhost:2005`;
+const API_KEY = `http://18.117.195.248:7070/`;
 
 export const createUser = async (payload: TRegisterSchema) => {
   const payloadVerification = registerSchema.safeParse(payload);
